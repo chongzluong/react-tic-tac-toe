@@ -2,10 +2,12 @@
 
 var React = require('react');
 var ReactDOM = require('react-dom');
+var game = require('./game');
 
+var test = "This is Working"
 var HelloMessage = React.createClass({
   render: function() {
-    return <h1>Hello World</h1>;
+    return <h1>{test}</h1>;
   }
 });
 
