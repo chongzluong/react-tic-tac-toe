@@ -94,28 +94,6 @@ var ScoreBoard = React.createClass({
 	}
 });
 
-/*var Component = React.createClass({
-
-	handleClick: function() {
-		console.log("Clicked");
-		controller.handleClick();
-	},
-
-	render: function() {
-		return <button onClick={handleClick}>TestButton</button>
-	}
-});
-
-ReactDOM.render(<Component />, document.getElementById('content'));
-
-var controller = {
-	handleClick:function() {
-		console.log("CLICKED ME");
-		game.makeMove(x, y);
-		ReactDom.render(<Component />, document.getElementById('content'));
-	}
-}*/
-
 module.exports.Title = Title;
 module.exports.InfoBox = InfoBox;
 module.exports.Grid = Grid;
