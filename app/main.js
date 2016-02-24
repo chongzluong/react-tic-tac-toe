@@ -1,16 +1,19 @@
 'use strict';
 
+// load in the modules
 var React = require('react');
 var ReactDOM = require('react-dom');
 var TicTacToe = require('./game');
 var components = require('./components');
 
-var game = new TicTacToe(10);
-//game.makeMove(1);
+/** The game size can be changed by changing the parameter here **/
+var game = new TicTacToe(4);
 
+// the controller acts as the intermediary between the view and the game model
 var controller = {
+	// modify the game model accordingly depending on the button clicked
 	handleClick:function(game, buttonID) {
-		if (buttonID == -1) { // restart button
+		if (buttonID == -1) { // id for restart button
 			game.restartGame();
 		} else {
 			game.makeMove(buttonID);
@@ -18,6 +21,7 @@ var controller = {
 		this.renderAll(game);
 	},
 
+	// update the view
 	renderAll:function(game) {
 		ReactDOM.render(<components.InfoBox game={game} controller={this}/>, 
 			document.getElementById('infoBox'));

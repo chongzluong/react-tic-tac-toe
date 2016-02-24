@@ -56,7 +56,7 @@ class TicTacToe {
 		this._turn = 1;
 	}
 
-	// make a TicTacToe move if it is someone's turn
+	// returns false if the move could not be made, true otherwise
 	makeMove(tileNum) {
 		if (this._turn) {
 			this._board[tileNum] = this._turn;
@@ -75,6 +75,7 @@ class TicTacToe {
 			this._turn = undefined;
 		}
 
+		// switch turns
 		if (this._turn == 1) {
 			this._turn = 2;
 		} else if (this._turn == 2) {
